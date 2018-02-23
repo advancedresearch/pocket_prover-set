@@ -2,6 +2,13 @@
 name = "pocket_prover-set"
 version = "0.1.0"
 authors = ["Sven Nilsen <bvssvni@gmail.com>"]
+keywords = ["prover", "solver", "logic", "first-order"]
+description = "A base logical system for PocketProver to reason about set properties"
+license = "MIT"
+repository = "https://github.com/advancedresearch/pocket_prover-set.git"
+homepage = "https://github.com/advancedresearch/pocket_prover-set"
+documentation = "https://docs.rs/pocket_prover-set"
+readme = "README.md"
 
 [dependencies]
 pocket_prover = "0.4.0"
