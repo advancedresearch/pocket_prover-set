@@ -1,0 +1,7 @@
+[package]
+name = "pocket_prover-set"
+version = "0.1.0"
+authors = ["Sven Nilsen <bvssvni@gmail.com>"]
+
+[dependencies]
+pocket_prover = "0.4.0"
