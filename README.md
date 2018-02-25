@@ -39,9 +39,9 @@ use pocket_prover::*;
 use pocket_prover_set::*;
 
 fn main() {
-    println!("Result {}", Set8::imply(
-        |sets| and(sets.uniqs(|xs| xorn(xs)), sets.a.uniq),
-        |sets| not(sets.h.uniq)
+    println!("Result {}", <(Set, Set, Set, Set, Set, Set, Set, Set)>::imply(
+        |sets| and(sets.uniqs(|xs| xorn(xs)), sets.0.uniq),
+        |sets| not(sets.7.uniq)
     ));
 }
 ```
