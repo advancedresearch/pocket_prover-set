@@ -50,11 +50,13 @@
 //!
 
 extern crate pocket_prover;
+#[macro_use]
+extern crate pocket_prover_derive;
 
 use pocket_prover::*;
 
 /// Conditions that holds for a set in general.
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Construct)]
 pub struct Set {
     /// All types, including those who are not defined.
     pub any: u64,
@@ -64,17 +66,6 @@ pub struct Set {
     pub fin_many: u64,
     /// Many but infinite number of values.
     pub inf_many: u64,
-}
-
-impl Construct for Set {
-    fn construct(vs: &[u64]) -> Self {
-        Set {
-            any: vs[0],
-            uniq: vs[1],
-            fin_many: vs[2],
-            inf_many: vs[3],
-        }
-    }
 }
 
 impl CoreRules for Set {
