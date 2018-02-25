@@ -5,8 +5,8 @@ use pocket_prover::*;
 use pocket_prover_set::*;
 
 fn main() {
-    println!("Result {}", Set2::imply(
-        |sets| and(imply(sets.a.uniq, sets.b.uniq), sets.a.uniq),
-        |sets| sets.b.uniq
+    println!("Result {}", <(Set, Set)>::imply(
+        |sets| and(imply(sets.0.uniq, sets.1.uniq), sets.0.uniq),
+        |sets| sets.1.uniq
     ));
 }
