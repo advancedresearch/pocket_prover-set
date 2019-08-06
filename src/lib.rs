@@ -31,7 +31,7 @@
 //!
 //! A set is undefined when it is `any` but neither unique, finite or infinite.
 //!
-//! Here is an example of a proof of 8 sets:
+//! Here is an example of a proof of 6 sets:
 //!
 //! ```rust
 //! extern crate pocket_prover;
@@ -41,9 +41,9 @@
 //! use pocket_prover_set::*;
 //!
 //! fn main() {
-//!     println!("Result {}", <(Set, Set, Set, Set, Set, Set, Set, Set)>::imply(
+//!     println!("Result {}", <(Set, Set, Set, Set, Set, Set)>::imply(
 //!         |sets| and(sets.uniqs(|xs| xorn(xs)), sets.0.uniq),
-//!         |sets| not(sets.7.uniq)
+//!         |sets| not(sets.5.uniq)
 //!     ));
 //! }
 //! ```
