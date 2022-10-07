@@ -110,7 +110,7 @@ impl Set {
     }
 
     /// Counts the number of true cases.
-    pub fn count<F: Fn(Set) -> u64>(f: F) -> u32 {
+    pub fn count<F: Fn(Set) -> u64>(f: F) -> u64 {
         count4(&mut |any, uniq, fin_many, inf_many| {
             f(Set {any, uniq, fin_many, inf_many})
         })
